@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 using namespace std;
 
 
@@ -32,9 +33,9 @@ int main(){
     Triangle.A[1] = P;
     Triangle.A[2] = Q;
     // il reste la valeur absolue a faire 
-    int cote1 = distance(O.x, P.x, O.y, P.y);
-    int cote2 = distance(P.x, Q.x, P.y, Q.y);
-    int cote3 = distance(Q.x, O.x, Q.y, O.y);
+    int cote1 = abs(distance(O.x, P.x, O.y, P.y));
+    int cote2 = abs(distance(P.x, Q.x, P.y, Q.y));
+    int cote3 = abs(distance(Q.x, O.x, Q.y, O.y));
     int peri = cote1 + cote2 + cote3;
     cout <<cote1 << "+" << cote2 << "+"<< cote3 << "="<< peri << endl;
 }
